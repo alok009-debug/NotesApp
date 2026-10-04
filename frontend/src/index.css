@@ -1,0 +1,390 @@
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+head,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif
+}
+
+.Home {
+  height: 100vh;
+  background-color: rgb(244, 239, 227);
+  display: flex;
+  padding: 17px;
+}
+
+.Home-Left {
+  background-color: rgb(14, 14, 16);
+  height: 100%;
+  color: white;
+  width: 25%;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.Home-Right {
+  background-color: #fffdf7;
+  color: black;
+  height: 100%;
+  width: 75%;
+  padding: 28px;
+  margin-left: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  ;
+}
+
+
+.left {
+
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.left-top {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.left-top .changeMode {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: rgb(34, 34, 37);
+}
+
+.left-top .logo img {
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.left-top h2 {
+  font-size: 35px;
+  font-family: sans-serif;
+}
+
+.left-centre {
+  /* border: 2px solid white; */
+  padding: 20px 0px;
+  margin: 30px 0px;
+}
+
+.left-folders {
+  border-top: 2px solid rgb(240, 238, 238);
+  opacity: .5;
+  padding: 20px 10px;
+  margin: 30px 0px;
+}
+
+.left-centre .tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(34, 34, 37);
+  padding: 6px 8px;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  margin: 7px;
+}
+
+.tile .icon {
+  display: flex;
+}
+
+.tile .icon img {
+  height: 25px;
+  background-color: rgb(34, 34, 37);
+}
+
+.tile .icon h4 {
+  margin-left: 15px;
+}
+
+.tile .number {
+  margin: 5px;
+}
+
+
+/* Left bottom folder css */
+.left-folders h4 {
+  /* margin-top: 10px; */
+  opacity: .7;
+  font-size: small;
+  letter-spacing: 1px;
+}
+
+.left-folders .tile-icon img {
+  height: 16px;
+}
+
+.left-folders .tile-icon h4 {
+  margin-left: 10px;
+  font-size: small;
+  font-weight: 400;
+  opacity: .7;
+}
+
+.left-folders .tile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+.left-folders .tile .tile-icon {
+  display: flex;
+  padding: 3px;
+}
+
+.addNoteButton {
+  margin-top: auto;
+  padding: 10px;
+}
+
+.addNoteButton button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+.addNoteButton button #plus {
+  font-weight: bolder;
+}
+
+
+
+/* ============ RIGHT COMPONENET CSS ====================== */
+
+.right {
+  /* background-color: blue; */
+  height: 100%;
+}
+
+.right-top {
+  height: 20%;
+  /* background-color: lightgreen; */
+  margin: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgb(152, 151, 151);
+}
+
+.right-top .left-head {
+  padding: 10px;
+}
+
+.right-top .left-head h2 {
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.right-top .left-head p {
+  font-family: 'Roboto';
+}
+
+.right-top .right-searchBar {
+  /* background-color: lightblue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: auto;
+}
+
+.right-searchBar input {
+  margin: 10px;
+  padding: 10px 16px;
+  background-color: rgb(245, 239, 227);
+  outline: none;
+  width: 20vw;
+  border: none;
+  border-radius: 11px;
+  font-size: medium;
+
+}
+
+.right-createNoteButton button {
+  padding: 10px;
+  margin-right: 10px;
+  /* font-size: 36px; */
+  border-radius: 14px;
+  background-color: black;
+  color: #ffffff;
+  font-size: medium;
+
+}
+
+/* =====Notes sections tags==== */
+
+
+.notes-section {
+  /* background-color: aquamarine; */
+  height: 80%;
+  width: 100%;
+
+
+}
+
+.notes-section .notes-tag {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  height: 10%;
+
+}
+
+.notes-tag .tag {
+  margin: 10px;
+  padding: 10px 35px;
+  /* padding-right: 20px; */
+  /* border: 2px solid;  */
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: rgb(242, 235, 219);
+}
+
+.notes-tag .tag:hover {
+  background-color: rgb(239, 230, 213);
+}
+
+.notes-card-section {
+  display: flex;
+  height: 90%;
+  width: 100%;
+  flex-wrap: wrap;
+  /* border: 2px solid black; */
+  /* grid-template-columns: max-cont; */
+  /* background-color: lightblue; */
+}
+
+
+/* ****** Notes Card css*********  */
+
+.NoteCard {
+  background-color: rgb(232, 122, 93);
+  /* border: 2px solid black; */
+  border-radius: 20px;
+  width: 23%;
+  height: 45%;
+  padding: 10px 20px;
+  margin: 7px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.NoteCard::-webkit-scrollbar {
+  display: none;
+}
+
+.NoteCard .cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  position: sticky;
+  top: 5px;
+  /* border: 2px solid lightgoldenrodyellow; */
+}
+
+.cardTop .noteType {
+  /* border: 2px solid black; */
+  border-radius: 2em;
+  padding: 2.3px .9em;
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: small;
+  color: rgba(0, 0, 0, 0.808);
+  text-transform: uppercase;
+}
+
+.cardTop .heart-icon {
+  width: 1.5em;
+  /* equal width and height */
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #000;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.cardTop .heart-icon:hover{
+  transform: scale(2);
+  transition: all ease-in-out;
+  z-index: 9;
+  border: none;
+}
+
+.NoteCard .title {
+  flex: 1;
+  /* this section grows to fill space */
+  overflow: hidden;
+  /* border: 2px solid rgb(206, 206, 103); */
+  padding: 5px
+}
+
+.NoteCard .title h3 {
+  font-size: bolder;
+  /* background-color: lightgreen; */
+  text-transform: capitalize;
+  margin-bottom: .5em;
+}
+
+.NoteCard .title p {
+  flex: 1;
+  /* take up remaining space */
+}
+
+.NoteCard .notes-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: small;
+  padding: 10px;
+  /* border: 2px solid rgb(146, 146, 110); */
+  /* background-color: rgb(43, 185, 232); */
+}
+
+.notes-bottom .delete-icon {
+  cursor: pointer;
+  /* padding: 1em;
+    margin: 20px; */
+  /* border: 1px solid black; */
+  justify-self: center;
+  align-self: center;
+  height: 20px;
+  width: 20px;
+}
+
+.delete-icon .Icon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all ease-in-out;
+  z-index: 9;
+}
