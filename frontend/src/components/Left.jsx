@@ -1,11 +1,34 @@
-import {RiAddLargeLine,RiMoonFill} from 'react-icons/ri';
+import { RiAddLargeLine, RiMoonFill } from 'react-icons/ri';
 import allNotesIcon from '../assets/layers.png';
 import folder from '../assets/folder.png';
+import { useState } from 'react';
+// const CreateNote = require('../components/CreateNote');
+
+import CreateNote from '../components/CreateNote'
 
 const Left = () => {
+
+    const [fromAcitve, setFormActive] = useState(false);
+    const [note, setNote] = useState({});
+    const [title, setTitle] = useState('');
+    const [noteContent, setNoteContent] = useState('');
+
+
+    const createNoteCard = () => {
+        setFormActive(true);
+        console.log('form active');
+    }
+    const closeForm = () => setFormActive(false);
+
+    const saveNote = (newNote) => {
+        setNote(newNote);
+        console.log('New note:', newNote);
+        closeForm();
+    };
+
     return (
-        <div className='left'>
-            <>
+        <>
+            <div className='left'>
                 <div className='left-top'>
                     <span className='logo'>
                         <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-notes-icon-png-image_3785512.jpg" alt="Note" />
@@ -56,15 +79,20 @@ const Left = () => {
                     </div>
                 </div>
 
-            </>
-            <div className='addNoteButton'>
-                <button>
-                    <RiAddLargeLine style={{ marginRight: '8px', fontWeight: 'bold'}}/>
-
-                    New Note
-                </button>
+                <div className='addNoteButton'>
+                    <button
+                        onClick={createNoteCard}>
+                        <RiAddLargeLine />
+                        New Note
+                    </button>
+                </div>
             </div>
-        </div>
+
+            {/* formActive */}
+            {fromAcitve && (
+                <CreateNote onSave={saveNote} onCancel={closeForm} />
+            )}
+        </>
     )
 }
 

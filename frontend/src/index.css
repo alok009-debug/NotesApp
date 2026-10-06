@@ -333,7 +333,7 @@ body {
   padding: 2px;
 }
 
-.cardTop .heart-icon:hover{
+.cardTop .heart-icon:hover {
   transform: scale(2);
   transition: all ease-in-out;
   z-index: 9;
@@ -387,4 +387,85 @@ body {
   transform: scale(1.5);
   transition: all ease-in-out;
   z-index: 9;
+}
+
+
+/* *********** CREATE NOTE FORM SECTION *************** */
+.popup-overlay {
+  position: fixed;        /* fixed to viewport */
+  top: 0;
+  left: 0;
+  width: 100%;            /* full width */
+  height: 100%;    
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;           /* sits above other components */
+}
+
+.popup-form {
+  background-color: rgb(246, 236, 201);
+  /* border: 2px solid black; */
+  padding: 20px;
+  border-radius: 1em;       /* full height */
+  outline: none;
+  width: 50%;
+  height: 50vh;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.popup-form h3{
+
+  font-size: 2em;
+  color: black;
+  font-family:cursive
+
+
+}
+
+.popup-form form{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* background-color: lightblue; */
+  height: 80%;
+  gap: 10px;
+}
+
+.popup-form form input{
+  width: 60%;
+  height: 30px;
+  padding: 4px;
+  border-radius: 5px;
+
+}
+
+.popup-form form textarea{
+  width: 60%;
+  height: 100%;
+  padding: 4px;
+  border-radius: 5px;
+}
+form textarea, input{
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none; 
+}
+.popup-form .form-actions{
+  /* margin: 1em; */
+  display: flex;
+  gap: 4em;
+  /* background-color: lightcoral; */
+}
+
+.form-actions  button{
+  /* justify-content: space-between; */
+  padding: 5px 1em ;
+  border-radius: .4em;
+  /* margin: 2px 1em; */
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  font-weight: 600;
+  cursor: pointer;
 }

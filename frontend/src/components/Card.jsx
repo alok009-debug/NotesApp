@@ -3,19 +3,23 @@ import { RiHeartLine, RiDeleteBin6Line } from 'react-icons/ri'
 import notesdata from '../data/NotesData'
 const Card = () => {
 
-    // if(!data || data.lenght === 0 ) return <p>No Notes Found.</p>;
     const [notes, setNotes] = useState([]);
 
-    useEffect(()=>{
-        setNotes(notesdata)
-    },[]);
+    useEffect(() => {
+        const data = localStorage.getItem('notesData');
+        if (data) {
+            setNotes(JSON.parse(data));
+        }
+    }, []);
+    if (!notes || notes.length === 0) {
+        return <p>No Notes Found.</p>;
+    }
 
     console.log(notes);
-    
+
     return (
         <>
             {notes.map(note => (
-
                 <div className='NoteCard' key={note.id}>
                     <div className='cardTop'>
                         <div className='noteType'>
